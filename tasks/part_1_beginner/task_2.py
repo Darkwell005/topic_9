@@ -1,6 +1,9 @@
-let: str = input()
 word: str = input()
-if word not in let:
+let: str = input()
+
+if let not in word:
     print(-1)
 else:
-    print(let.index(word))
+    ...  # Нельзя использовать встроенные методы
+
+# Подсказка: Нужно применить цикл
