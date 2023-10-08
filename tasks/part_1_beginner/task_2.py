@@ -1,1 +1,6 @@
-# TODO: Пожалуйста, добавьте свой код ниже с комментариями и понятными названиями переменных.
+let: str = input()
+word: str = input()
+if word not in let:
+    print(-1)
+else:
+    print(let.index(word))

@@ -1,1 +1,5 @@
-# TODO: Пожалуйста, добавьте свой код ниже с комментариями и понятными названиями переменных.
+let: str = input()
+counter: int = 0
+for _ in let:
+    counter += 1
+print(counter)
