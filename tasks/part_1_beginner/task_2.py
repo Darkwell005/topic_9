@@ -5,7 +5,11 @@ if let not in word:
     print(-1)
 
 else:
-    count = 0
-    for i in word:
-        print()
-# Подсказка: Нужно применить цикл
+    find_index = -1
+    for i in ...:
+
+        if word[i] == let:
+            find_index = i
+            ...
+
+    print(find_index)
