@@ -3,7 +3,9 @@ let: str = input()
 
 if let not in word:
     print(-1)
-else:
-    ...  # Нельзя использовать встроенные методы
 
+else:
+    count = 0
+    for i in word:
+        print()
 # Подсказка: Нужно применить цикл
