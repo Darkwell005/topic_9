@@ -1,1 +1,6 @@
-# TODO: Пожалуйста, добавьте свой код ниже с комментариями и понятными названиями переменных.
+word: str = input()
+symbol: str = input()
+for i in range(len(word)):
+    if word[-1] == i:
+        print(word[i] + symbol)
+

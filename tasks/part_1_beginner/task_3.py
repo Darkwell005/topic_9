@@ -9,5 +9,7 @@ for item in line:
     # и состояние флага меняем
 
     if item != " ":  # тут уже нужно улушить проверку.
+        is_printed = True
         k += item
         print(k)
+
