@@ -1,13 +1,10 @@
 line: str = input()
 
-out_line = ""
-is_printed = False
+out_line: str = ""
+is_printed: bool = False
 
 for item in line:
-    # 1. Вы почти у цели, нужно дописать условие, и задача решена!
-    if item != " ":  # 2. Это половина условия, ещё
-        # Вы должны проверять состояние флага
-
+    if is_printed or item != " ":
         is_printed = True
         out_line += item
         print(out_line)
