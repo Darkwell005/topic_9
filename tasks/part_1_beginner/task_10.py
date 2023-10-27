@@ -9,8 +9,8 @@ ALPHABETS: dict = {
                    "БВГДЖЗЙКЛМНПРСТФХЦЧШЩЪЬ"),
 }
 word: str = input()
-set_vowels = ""
-set_consonants = ""
+set_vowels: str = ""
+set_consonants: str = ""
 for item in word:
     if item in ALPHABETS["vowels"]:
         set_vowels += item
