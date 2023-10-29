@@ -5,21 +5,14 @@ ALPHABETS: dict = {
                    "бвгджзйклмнпрстцфчьжхъщшБВГДЖЗЙКЛМНПРСТФХЦЧШЩЪЬ"),
 }
 
-word: str = input()
+count_vowels: int = 0
+count_consonants: int = 0
 
-# 1. Здесь лучше использовать счетчик, вместо создания новой строки
-set_vowels: str = ""
-set_consonants: str = ""
-
-for item in word:
+for item in input():
     if item in ALPHABETS["vowels"]:
-        set_vowels += item
+        count_vowels += 1
 
-    # 2. Лишняя проверка if, исправьте пожалуйста на соответствующий оператор
-    if item in ALPHABETS["consonants"]:
-        set_consonants += item
+    elif item in ALPHABETS["consonants"]:
+        count_consonants += 1
 
-# 3. Как все исправите, здесь нужно будет вывести только значение счетчиков
-print(len(set_vowels), len(set_consonants), sep="\n")
-
-# В целом хорошая работа! Молодцы!
+print(count_vowels, count_consonants, sep="\n")
