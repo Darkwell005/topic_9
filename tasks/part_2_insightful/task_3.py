@@ -60,6 +60,13 @@ s = (b'\xd0\x9d\xd0\xb0\xd0\xbf\xd0\xb8\xd1\x88\xd0\xb8\xd1\x82\xd0\xb5 '
 > - При проверке игнорировать пробелы, знаки препинания (запятые, дефисы) и регистр букв.
 > - Палиндром - это строка, которая читается одинаково слева направо и справа налево.
 """
-line = input()
+user = input()
+user = user.replace("-", "")
+user = user.replace(",", "")
+user = user.split()
 
+line = ""
+for word in user:
+    line += word
+line = line.lower()
 print(line[::-1] == line)
