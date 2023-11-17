@@ -1,5 +1,2 @@
-user_input = input()
-
-user_input = user_input.split("*")
-for word in user_input:
+for word in input().split('*'):
     print(word.capitalize())
