@@ -1,1 +1,8 @@
-# TODO: Пожалуйста, добавьте свой код ниже с комментариями и понятными названиями переменных.
+line = input()
+line = line.title()
+line = line.replace(" ", "")
+print("camel" + line)
+print("Pascal" + line)
+line = line.lower()
+line = line.replace('', "_")
+print("snake" + line)
