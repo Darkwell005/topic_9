@@ -1,8 +1,7 @@
 line = input()
 line = line.title()
-line = line.replace(" ", "")
-print("camel" + line)
+print("camel" + line.replace(" ", ""))
 print("Pascal" + line)
 line = line.lower()
-line = line.replace('', "_")
-print("snake" + line) # Как решить тут ошибку
+line = line.replace(" ", "_")
+print("snake_" + line.rstrip("_"))
