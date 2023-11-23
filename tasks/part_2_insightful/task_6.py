@@ -5,8 +5,8 @@ count_space = 0
 for i in line:
     if i.isnumeric():
         count_num += 1
-    if i.isalpha():
+    elif i.isalpha():
         count_let += 1
-    if i.isspace():
+    elif i.isspace():
         count_space += 1
 print(count_let, count_num, count_space, sep="\n")
