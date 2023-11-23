@@ -61,22 +61,9 @@ s = (b'\xd0\x9d\xd0\xb0\xd0\xbf\xd0\xb8\xd1\x88\xd0\xb8\xd1\x82\xd0\xb5 '
 > - Палиндром - это строка, которая читается одинаково слева направо и справа налево.
 """
 
-user = input()
+user: str = input().lower()
 
-# Методы, которые возвращают строку можно вызвать в цепочку
-user = user.replace("-", ""
-                    ).replace(",", "")
-
-# 1. Лишнее действие, нужно убрать
-user = user.split()
-
-# 2. Лишнее действие, нужно убрать
-line = ""
-for word in user:
-    line += word
-line = line.lower()
-
-# 3. Эту можно решить не используя split() и без цикла.
-
-# Отлично!
-print(line[::-1] == line)
+user: str = user.replace("-", ""
+                         ).replace(",", ""
+                                   ).replace(" ", "")
+print(user[::-1] == user)
