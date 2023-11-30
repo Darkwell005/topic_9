@@ -1,9 +1,9 @@
-names = input().split()
+names: list = input().split()
 
-vowels = "АУЕЫОЭЯИЮауеыоэяию"
+vowels: str = "АУЕЫОЭЯИЮауеыоэяию"
 
-max_vowels = -1
-result = []
+max_vowels: int = -1
+result: list = []
 
 for name in names:
     count_vowels = 0
@@ -11,12 +11,12 @@ for name in names:
         if letter in vowels:
             count_vowels += 1
 
-    if ...:
-        ...
-        # Сбросить и положить в список текущее имя
-    elif ...:
-        # Добавить имя в список, так как длина гласных букв в
-        # этих именах совпадает.
-        ...
+    if max_vowels < count_vowels:
+        result = [name]
+        max_vowels = count_vowels
 
-print(result)
+    elif max_vowels == count_vowels:
+        result.append(name)
+
+for word in result:
+    print(word.capitalize())
