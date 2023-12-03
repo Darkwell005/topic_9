@@ -1,24 +1,30 @@
-while True:
-    print('Программа "Конвертер валют"\n')
+print('Программа "Конвертер валют"')
 
-    print("Выберите операцию (0 для выхода):\n"
+while True:
+    print("\nВыберите операцию (0 для выхода):\n"
           "1. Конвертировать рубли в доллары\n"
           "2. Конвертировать доллары в рубли")
-    operation: str = (input("Введите номер операции: "))
-    if not operation.isnumeric():
+
+    operation: str = input("Введите номер операции: ")
+    if not operation.isdigit():
         print("Введите числовое значение (номер операции)")
-    elif ((operation != "0")
-          and (operation != "1")
-          and (operation != "2")):
-        print("Неверный выбор операции. Попробуйте ещё раз.")
     elif operation == "0":
         print("До свидания!")
         break
-    elif operation == "1":
-        exchange_rate = float(input("Введите курс доллара к рублю: "))
-        quantity = float(input("Введите количество рублей: "))
-        print(f"Вы получите {exchange_rate * quantity:05.2f} USD\n")
-    elif operation == "2":
-        exchange_rate: float = float(input("Введите курс доллара к рублю: "))
-        quantity: float = float(input("Введите количество рублей: "))
-        print(f"Вы получите {exchange_rate * quantity:05.2f} RUB\n")
+    elif operation not in '12':
+        print("Неверный выбор операции. Попробуйте ещё раз.")
+        continue
+
+    rate_hint: str = "Введите курс доллара к рублю: "
+    quantity_hint: str = "Введите количество рублей: "
+    currency_sign: str = "USD"
+
+    if operation == "2":
+        rate_hint: str = "Введите курс доллара к рублю: "
+        quantity_hint: str = "Введите количество долларов: "
+        currency_sign: str = "RUB"
+
+    exchange_rate: float = float(input(rate_hint))
+    quantity: float = float(input(quantity_hint))
+
+    print(f"Вы получите {exchange_rate * quantity:05.2f} {currency_sign}")
