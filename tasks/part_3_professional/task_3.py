@@ -7,18 +7,23 @@ title = "Название"
 discount_amount_hint = "Сумма скидки"
 new_price_hint = "Новая цена"
 
-if (discount <= 0) or (discount > 100):
+if (discount <= 0) or (discount >= 100):
     print("Размер скидки должен "
           "быть больше 0 и не "
           "должен превышать 100")
+else:
+    print(f"{title:<15} "
+          f"{price_hint:<10} "
+          f"{discount_amount_hint:<15} "
+          f"{new_price_hint:<10}")
 
-print(f"{title:<15} "
-      f"{price_hint:<10} "
-      f"{discount_amount_hint:<15} "
-      f"{new_price_hint:<10}")
+    product_count = 1
+    for item in price:
+        num = float(item)
+        discount_amount = num * (discount / 100)
 
-for item in price:
-    num = float(item)
-    discount_amount = num * discount / 100
-    print(f"{discount_amount:.2f}")
+        # Вывод таблицы
+        print(f"Товар {product_count} "
+              f"{discount_amount:.2f} ")
 
+        product_count += 1
