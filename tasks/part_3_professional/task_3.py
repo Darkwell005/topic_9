@@ -1,11 +1,11 @@
-discount = int(input())
-price = input().split()
+discount: int = int(input())
+price: list = input().split()
 
-commodity = "Товар"
-price_hint = "Цена"
-title = "Название"
-discount_amount_hint = "Сумма скидки"
-new_price_hint = "Новая цена"
+goods: str = "Товар"
+price_hint: str = "Цена"
+title: str = "Название"
+discount_amount_hint: str = "Сумма скидки"
+new_price_hint: str = "Новая цена"
 
 if (discount <= 0) or (discount >= 100):
     print("Размер скидки должен "
@@ -17,13 +17,17 @@ else:
           f"{discount_amount_hint:<15} "
           f"{new_price_hint:<10}")
 
-    product_count = 1
-    for item in price:
-        num = float(item)
-        discount_amount = num * (discount / 100)
+    product_count: int = 1
+    for cost in price:
+        cost = float(cost)
+        discount_amount: float = cost * (discount / 100)
+        new_price: float = cost - discount_amount
 
         # Вывод таблицы
-        print(f"Товар {product_count} "
-              f"{discount_amount:.2f} ")
+        product = f"Товар {product_count} "
+        print(f"{product:<15} "
+              f"{cost:<10.2f} "
+              f"{discount_amount:<15.2f} "
+              f"{new_price:<10.2f}")
 
         product_count += 1
