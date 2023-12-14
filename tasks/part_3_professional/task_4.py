@@ -1,4 +1,4 @@
-ages: list[str, ...] = input(
+ages: list[str] = input(
     "Введите возрасты посетителей через пробел: "
 ).split()
 

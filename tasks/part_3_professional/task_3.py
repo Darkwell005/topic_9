@@ -1,5 +1,5 @@
 discount: int = int(input())
-price: list[str, ...] = input().split()
+price: list[str] = input().split()
 
 goods: str = "Товар"
 price_hint: str = "Цена"
