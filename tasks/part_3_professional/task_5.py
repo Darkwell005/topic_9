@@ -1,5 +1,6 @@
 names: list[str] = []
-
+max_name = 0
+min_name = 0
 i = 1
 while True:
     full_name: str = input().strip()
@@ -16,10 +17,10 @@ while True:
     # Добавлять в список номер строки|, ФИО
 
     i += 1
-
-print(" № ФИО")
+    if len(last_name) > 0:
+        max_name = len(last_name)
+        
+hint = "ФИО"
+print(f"{hint:^{max_name}}")
 for name in names:
     print(name)
-
-
-format()
