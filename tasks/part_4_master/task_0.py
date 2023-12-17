@@ -1,11 +1,17 @@
 words: list = input().split()
-f = ""
-for word in words:
-    if len(word) >= 5:
-        print(word[::-1], end=" ")
-words = input().split()
-f = ""
-for word in words:
-    if len(word) >= 5:
-        f += word[::-1]
-print(f)
+
+for i in range(len(words)):
+    if len(words[i]) >= 5:
+        words[i] = words[i][::-1]
+
+print(*words)
+print(' '.join(words))
+
+
+# Option 2
+# for i, word in enumerate(words):
+#     if len(word) >= 5:
+#         words[i] = word[::-1]
+#
+# print(*words)
+# print(' '.join(words))
