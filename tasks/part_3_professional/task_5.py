@@ -1,6 +1,5 @@
 names: list[str] = []
 max_name = 0
-min_name = 0
 i = 1
 while True:
     full_name: str = input().strip()
