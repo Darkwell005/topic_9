@@ -1,9 +1,10 @@
 line: str = input()
+
 flag: bool = True
-d: str = ""
+unique_chars: str = ""
 for item in line:
-    if item not in d:
-        d += item
+    if item not in unique_chars:
+        unique_chars += item
     else:
         flag = False
 print(flag)

@@ -7,8 +7,11 @@ num: int = 256
 degree: int = 3
 
 result: int = 0
+# TODO: Цикл можно упростить, если избавиться от переменной degree
 for item in line:
     item = int(item)
     result += item * (num ** degree)
     degree -= 1
 print(result)
+
+
