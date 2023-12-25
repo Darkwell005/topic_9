@@ -1,9 +1,9 @@
 line = input().strip()
-flag = True
-for i in line:
-    if i.isupper() and flag:
-        flag = False
+out_line: str = line[0].lower()
+for i in line[1:]:
+    if not i.isupper():
+        out_line += i
     elif i.isupper():
-        line = line.replace(i, "_" + i.lower())
+        out_line += "_" + i
 
-print(line.lower())
+print(out_line.lower())
