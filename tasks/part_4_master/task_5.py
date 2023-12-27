@@ -1,9 +1,15 @@
-line = input().strip()
+line = input().strip()  # 1. не забывайте аннотации типа
+
 out_line: str = line[0].lower()
 for i in line[1:]:
-    if not i.isupper():
-        out_line += i
-    elif i.isupper():
-        out_line += "_" + i
+    if not i.isupper():  # 2. проверка лишняя
+
+        out_line += i  # 3. это почти то же самое действие, что и ниже в elif,
+        # значит, его можно вынести за пределы блока.
+
+    elif i.isupper():  # 4. как только исправите, измените elif на if
+
+        out_line += "_" + i  # здесь код поменяется, общие вынесем
+        # за пределы блока, остальные останутся.
 
 print(out_line.lower())
