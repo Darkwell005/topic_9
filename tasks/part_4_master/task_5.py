@@ -1,4 +1,4 @@
-line = input().strip()
+line: str = input().strip()
 
 out_line: str = line[0].lower()
 for i in line[1:]:

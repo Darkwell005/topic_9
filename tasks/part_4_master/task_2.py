@@ -2,16 +2,21 @@
 # 77 * 256^3 + 88 * 256^2 +
 # 21 * 256^1 + 8 * 256^0 =
 # 1297618184.
+
+# ---------------------
+
 line: list = input().split(".")
 num: int = 256
-degree: int = 3
 
 result: int = 0
-# TODO: Цикл можно упростить, если избавиться от переменной degree
-for item in line:
-    item = int(item)
-    result += item * (num ** degree)
-    degree -= 1
+for i in range(len(line)):
+    result += int(line[3 - i]) * (num ** i)
 print(result)
 
+# --------------------- Option 2
 
+bits_32: str = ""
+for octet in input().split("."):
+    bits_32 += bin(int(octet))[2:].zfill(8)
+
+print(int(bits_32, 2))
