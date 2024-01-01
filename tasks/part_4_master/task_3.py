@@ -1,13 +1,8 @@
 num: int = int(input())
-
-# 1. Полученное число преобразуем в двоичную систему
-# и заполним нулями, если не хватает
-
-# 2. Нужен список, для хранения октет
-
-# 3. Использовать цикл и разбить на октеты
-
-# list(range(0, 33, 8))
-
-
-print('.'.join('Ваш_список_октет'))
+octet = bin(num)[2:].zfill(32)
+left: int = 0
+octet_list: list[str] = []
+for i in range(8, 33, 8):
+    octet_list.append(str(int(octet[left:i], 2)))
+    left = i
+print('.'.join(octet_list))
